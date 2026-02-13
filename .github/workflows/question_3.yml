@@ -1,5 +1,8 @@
 name: Node JS Application
 on:
+  push:
+    branches:
+      - main
   pull_request:
 jobs:
   matrix_based_node_js_application:
