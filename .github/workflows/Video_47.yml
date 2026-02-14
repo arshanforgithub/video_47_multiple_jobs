@@ -1,0 +1,23 @@
+
+on: push
+
+jobs:
+  install_and_test_nodejs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Intall dependecy 
+        run: npm cli
+
+      - name: Test the NodeJS
+        run: npm test
+
+      - name: Print the Version of the Node JS 
+        run: node -v       
