@@ -14,10 +14,27 @@ jobs:
           node-version: '18'
 
       - name: Intall dependecy 
-        run: npm cli
+        run: npm ci
 
       - name: Test the NodeJS
         run: npm test
 
       - name: Print the Version of the Node JS 
-        run: node -v       
+        run: node -v 
+  deploy: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v3
+      - name: Install Node JS aain
+        uses: actions/setup-node@v3
+      - name: Install depdendency
+        run: npm install ci
+      - name: Simple build
+        run: echo "build Start"  
+      
+
+        
+
+
+        
